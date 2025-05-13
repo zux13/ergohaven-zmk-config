@@ -6,7 +6,7 @@ manifest:
       url-base: https://github.com/ergohaven
   projects:
     - name: zmk
-      remote: ergohaven
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
     - name: ergohaven-zmk
