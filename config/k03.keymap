@@ -2,6 +2,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     behaviors {
@@ -49,11 +50,11 @@
 
         sym {
             bindings = <
-&trans  &trans    &kp LS(AT)    &kp LS(DLLR)  &kp LS(POUND)  &trans                          &trans         &trans        &kp LS(CARET)  &trans        &trans  &trans
-&trans  &trans    &kp LS(LT)    &kp EQUAL     &kp LS(GT)     &kp GRAVE                       &trans         &kp LBKT      &kp LS(UNDER)  &kp RBKT      &trans  &trans
-&trans  &kp BSLH  &kp LS(LPAR)  &kp MINUS     &kp LS(RPAR)   &kp LS(PLUS)                    &kp LS(PRCNT)  &kp LS(LBRC)  &kp SEMI       &kp LS(RBRC)  &trans  &trans
-&trans  &trans    &kp LS(STAR)  &kp SEMI      &kp FSLH       &trans        &trans    &trans  &trans         &kp LS(PIPE)  &kp LS(TILDE)  &kp LS(AMPS)  &trans  &trans
-                  &trans        &trans        &trans         &mo 3         &trans    &trans  &trans         &trans        &trans         &trans
+&trans  &trans    &kp AT    &kp DLLR   &kp HASH  &trans                       &trans     &trans    &kp CARET  &trans    &trans    &trans
+&trans  &trans    &kp LT    &kp EQUAL  &kp GT    &kp GRAVE                    &trans     &kp LBKT  &kp UNDER  &kp RBKT  &trans    &trans
+&trans  &kp BSLH  &kp LPAR  &kp MINUS  &kp RPAR  &kp PLUS                     &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &trans
+&trans  &trans    &kp STAR  &kp COLON  &kp FSLH  &trans     &trans    &trans  &trans     &kp PIPE  &kp TILDE  &kp AMPS  &trans    &trans
+                  &trans    &trans     &trans    &mo 3      &trans    &trans  &trans     &trans    &trans     &trans
             >;
 
             display-name = "Symbols";
@@ -61,11 +62,11 @@
 
         adj {
             bindings = <
-&studio_unlock  &trans        &trans        &trans        &trans        &bt BT_CLR_ALL                    &trans  &trans        &trans            &trans        &trans  &trans
-&bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans                            &trans  &trans        &trans            &trans        &trans  &trans
-&trans          &trans        &trans        &trans        &trans        &trans                            &trans  &kp C_VOL_DN  &kp K_MUTE        &kp C_VOL_UP  &trans  &trans
-&trans          &trans        &trans        &trans        &trans        &trans          &trans    &trans  &trans  &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT    &trans  &trans
-                              &trans        &trans        &trans        &trans          &trans    &trans  &trans  &trans        &trans            &trans
+&bootloader  &trans  &trans  &trans  &trans  &trans                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2      &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
+&trans       &trans  &trans  &trans  &trans  &trans                    &trans        &trans        &trans            &trans        &trans        &studio_unlock
+&trans       &trans  &trans  &trans  &trans  &trans                    &out OUT_BLE  &kp C_VOL_DN  &kp K_MUTE        &kp C_VOL_UP  &trans        &trans
+&trans       &trans  &trans  &trans  &trans  &trans  &trans    &trans  &out OUT_USB  &kp K_PREV    &kp K_PLAY_PAUSE  &kp K_NEXT    &trans        &trans
+                     &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans            &trans
             >;
 
             display-name = "Adjust";
