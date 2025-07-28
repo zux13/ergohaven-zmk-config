@@ -121,7 +121,7 @@
                                           &kp BACKSPACE  &mo 4  &kp SPACE    &kp ENTER  &mo 2  &kp TAB
             >;
 
-            display-name = "En";
+            display-name = "Base";
         };
 
         ru {
@@ -143,7 +143,7 @@
                                                     &trans           &mo 5      &trans    &trans  &none      &trans
             >;
 
-            display-name = "Sym En";
+            display-name = "Symbols";
         };
 
         sym_ru {
@@ -154,7 +154,7 @@
                                                             &trans           &mo 5      &trans    &trans  &none      &trans
             >;
 
-            display-name = "Sym Ru";
+            display-name = "Symbols";
         };
 
         nav {

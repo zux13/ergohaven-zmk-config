@@ -74,7 +74,7 @@
                   &kp GRAVE  &kp LGUI  &kp LCTRL  &mo 2  &kp SPACE    &kp RET  &mo 3  &kp LALT  &kp LBKT   &kp RBKT
             >;
 
-            display-name = "En";
+            display-name = "Base";
         };
 
         ru {
@@ -107,7 +107,7 @@
                    &trans    &trans     &trans    &mo 5      &trans    &trans  &trans     &trans    &kp LBKT   &kp RBKT
             >;
 
-            display-name = "Sym En";
+            display-name = "Symbols";
         };
 
         sym_ru {

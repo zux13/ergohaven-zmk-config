@@ -90,7 +90,7 @@
                   &kp LALT  &kp LGUI  &kp LCTRL  &mo 2  &kp SPACE    &kp RET  &mo 3  &cap_sen 6 MB1  &kp LBKT   &kp RBKT
             >;
 
-            display-name = "En";
+            display-name = "Base";
         };
 
         ru {
@@ -122,11 +122,11 @@
                    &trans    &trans     &trans    &mo 5      &trans    &trans  &trans     &trans    &kp LBKT   &kp RBKT
             >;
 
-            display-name = "Sym En";
+            display-name = "Symbols";
         };
 
         sym_ru {
-            display-name = "Sym Ru";
+            display-name = "Symbols";
             bindings = <
 &kp RU_CYRILLIC_IO  &en HASH          &en LT    &kp EQUAL     &en GT       &en GRAVE                    &en CARET  &kp RU_DQT  &kp UNDER    &en SQT   &trans      &trans
 &kp RU_NUMERO       &kp RU_BACKSLASH  &kp LPAR  &kp MINUS     &kp RPAR     &kp PLUS                     &kp PRCNT  &en LBRC    &kp RU_SEMI  &kp RBRC  &kp EXCL    &kp RU_QMARK
