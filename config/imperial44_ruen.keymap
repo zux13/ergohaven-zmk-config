@@ -79,14 +79,6 @@
     };
 
     behaviors {
-        td_cyr_soft_sign: td_cyr_soft_sign {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_CYR_SOFT_SIGN";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp RU_CYRILLIC_SOFT_SIGN>, <&kp RU_CYRILLIC_HARD_SIGN>;
-        };
-
         td_left_ctrl: td_left_ctrl {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LEFT_CTRL";
@@ -144,9 +136,9 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp ESC    &kp RU_CYRILLIC_SHORT_I      &kp RU_CYRILLIC_TSE            &kp RU_CYRILLIC_U              &kp RU_CYRILLIC_KA       &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE      &kp RU_CYRILLIC_SHA             &kp RU_CYRILLIC_SHCHA         &kp RU_CYRILLIC_ZE             &kp BACKSPACE
-&kp TAB    &mt LEFT_GUI RU_CYRILLIC_EF  &mt LEFT_ALT RU_CYRILLIC_YERU  &mt LEFT_SHIFT RU_CYRILLIC_VE  &mt LCTRL RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &mt RCTRL RU_CYRILLIC_O  &mt RIGHT_SHIFT RU_CYRILLIC_EL  &mt RIGHT_ALT RU_CYRILLIC_DE  &mt RIGHT_GUI RU_CYRILLIC_ZHE  &kp ENTER
-&kp GRAVE  &kp RU_CYRILLIC_YA           &kp RU_CYRILLIC_CHE            &kp RU_CYRILLIC_ES             &kp RU_CYRILLIC_EM       &kp RU_CYRILLIC_I   &none        &trans     &kp RU_CYRILLIC_TE  &td_cyr_soft_sign        &kp RU_CYRILLIC_BE              &kp RU_CYRILLIC_YU            &kp RU_CYRILLIC_E              &kp LEFT_BRACKET
+&kp ESC    &kp RU_CYRILLIC_SHORT_I      &kp RU_CYRILLIC_TSE            &kp RU_CYRILLIC_U              &kp RU_CYRILLIC_KA       &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE                              &kp RU_CYRILLIC_SHA             &kp RU_CYRILLIC_SHCHA         &kp RU_CYRILLIC_ZE             &kp BACKSPACE
+&kp TAB    &mt LEFT_GUI RU_CYRILLIC_EF  &mt LEFT_ALT RU_CYRILLIC_YERU  &mt LEFT_SHIFT RU_CYRILLIC_VE  &mt LCTRL RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &mt RCTRL RU_CYRILLIC_O                          &mt RIGHT_SHIFT RU_CYRILLIC_EL  &mt RIGHT_ALT RU_CYRILLIC_DE  &mt RIGHT_GUI RU_CYRILLIC_ZHE  &kp ENTER
+&kp GRAVE  &kp RU_CYRILLIC_YA           &kp RU_CYRILLIC_CHE            &kp RU_CYRILLIC_ES             &kp RU_CYRILLIC_EM       &kp RU_CYRILLIC_I   &none        &trans     &kp RU_CYRILLIC_TE  &mt RU_CYRILLIC_HARD_SIGN RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE              &kp RU_CYRILLIC_YU            &kp RU_CYRILLIC_E              &kp LEFT_BRACKET
                                                                                                       &caps_word               &mo 2               &kp SPACE    &kp SPACE  &mo 4               &layer_en
             >;
         };
@@ -176,9 +168,9 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans  &mt TILDE GRAVE  &en CARET       &en FSLH  &en LS(RU_CYRILLIC_BE)  &en LS(NUMBER_2)                    &en LPAR          &en LEFT_BRACKET   &en LEFT_BRACE   &en EXCL          &mt HASH RU_NUMERO  &trans
-&trans  &en PLUS         &en MINUS       &en PIPE  &en EQUAL               &en PRCNT                           &kp LS(NUMBER_2)  &en DOT            &kp QMARK        &kp LS(NUMBER_6)  &kp LS(NUMBER_4)    &trans
-&trans  &en DOLLAR       &en UNDERSCORE  &en BSLH  &en LS(RU_CYRILLIC_YU)  &en LS(N7)        &trans    &trans  &en RPAR          &en RIGHT_BRACKET  &en RIGHT_BRACE  &en QMARK         &en ASTRK           &trans
+&trans  &mt TILDE GRAVE  &en CARET       &en FSLH  &en LS(RU_CYRILLIC_BE)  &en LS(NUMBER_2)                    &en LPAR          &en LEFT_BRACKET   &en LEFT_BRACE   &en EXCL             &mt HASH RU_NUMERO   &trans
+&trans  &en PLUS         &en MINUS       &en PIPE  &en EQUAL               &en PRCNT                           &kp LS(NUMBER_2)  &en DOT            &kp QMARK        &kp LS(KP_NUMBER_6)  &kp LS(KP_NUMBER_4)  &trans
+&trans  &en DOLLAR       &en UNDERSCORE  &en BSLH  &en LS(RU_CYRILLIC_YU)  &en LS(N7)        &trans    &trans  &en RPAR          &en RIGHT_BRACKET  &en RIGHT_BRACE  &kp LS(KP_NUMBER_7)  &en ASTRK            &trans
                                                    &trans                  &mo 5             &trans    &trans  &trans            &trans
             >;
         };
