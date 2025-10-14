@@ -87,38 +87,38 @@
             bindings = <&kp RU_CYRILLIC_SOFT_SIGN>, <&kp RU_CYRILLIC_HARD_SIGN>;
         };
 
-        td_left_shift: td_left_shift {
+        td_left_ctrl: td_left_ctrl {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_LEFT_SHIFT";
+            label = "TD_LEFT_CTRL";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_ARROW>, <&kp LS(LEFT)>;
+            bindings = <&kp LEFT_ARROW>, <&kp LC(LEFT)>;
 
             tapping-term-ms = <200>;
         };
 
-        td_right_shift: td_right_shift {
+        td_right_ctrl: td_right_ctrl {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_RIGHT_SHIFT";
+            label = "TD_RIGHT_CTRL";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_ARROW>, <&kp LS(RIGHT_ARROW)>;
+            bindings = <&kp RIGHT_ARROW>, <&kp LC(RIGHT_ARROW)>;
 
             tapping-term-ms = <200>;
         };
 
-        td_up_shift: td_up_shift {
+        td_up_ctrl: td_up_ctrl {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_UP_SHIFT";
+            label = "TD_UP_CTRL";
             #binding-cells = <0>;
-            bindings = <&kp UP>, <&kp LS(UP)>;
+            bindings = <&kp UP>, <&kp LC(UP)>;
 
             tapping-term-ms = <200>;
         };
 
-        td_down_shift: td_down_shift {
+        td_down_ctrl: td_down_ctrl {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_DOWN_SHIFT";
+            label = "TD_DOWN_CTRL";
             #binding-cells = <0>;
-            bindings = <&kp DOWN>, <&kp LS(DOWN)>;
+            bindings = <&kp DOWN>, <&kp LS(LC(DOWN))>;
 
             tapping-term-ms = <200>;
         };
@@ -131,14 +131,14 @@
             bindings = <
 &kp ESC  &kp Q           &kp W           &kp E             &kp R        &kp T                                &kp Y  &kp U        &kp I              &kp O            &kp P               &kp BACKSPACE
 &kp TAB  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &kp G                                &kp H  &mt LCTRL J  &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMI  &kp KP_ENTER
-&none    &kp Z           &kp X           &kp C             &kp V        &kp B  &none        &kp PRINTSCREEN  &kp N  &kp M        &kp COMMA          &kp DOT          &kp SQT             &none
+&trans   &kp Z           &kp X           &kp C             &kp V        &kp B  &none        &kp PRINTSCREEN  &kp N  &kp M        &kp COMMA          &kp DOT          &kp SQT             &trans
                                                            &caps_word   &mo 2  &kp SPACE    &kp SPACE        &mo 3  &layer_ru
             >;
 
             display-name = "Base";
             sensor-bindings =
                 <&inc_dec_kp C_VOL_UP C_VOL_DN>,
-                <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
+                <&inc_dec_kp C_AC_SCROLL_UP C_AC_SCROLL_DOWN>;
         };
 
         ru {
@@ -153,10 +153,10 @@
 
         nav {
             bindings = <
-&trans          &none  &none           &none           &none            &none                              &kp PG_UP  &kp N7  &kp N8  &kp N9  &none         &kp DELETE
-&trans          &none  &kp HOME        &td_up_shift    &kp END          &kp INSERT                         &kp PG_DN  &kp N4  &kp N5  &kp N6  &kp NUMBER_0  &trans
-&kp LEFT_SHIFT  &none  &td_left_shift  &td_down_shift  &td_right_shift  &kp PAUSE_BREAK  &trans    &trans  &none      &kp N1  &kp N2  &kp N3  &none         &trans
-                                                       &trans           &trans           &trans    &trans  &mo 5      &trans
+&trans          &none  &none          &none          &none           &none                              &kp PG_UP  &kp N7  &kp N8  &kp N9  &none         &kp DELETE
+&trans          &none  &kp HOME       &td_up_ctrl    &kp END         &kp INSERT                         &kp PG_DN  &kp N4  &kp N5  &kp N6  &kp NUMBER_0  &trans
+&kp LEFT_SHIFT  &none  &td_left_ctrl  &td_down_ctrl  &td_right_ctrl  &kp PAUSE_BREAK  &trans    &trans  &none      &kp N1  &kp N2  &kp N3  &none         &trans
+                                                     &trans          &trans           &trans    &trans  &mo 5      &trans
             >;
 
             display-name = "Navigation";
