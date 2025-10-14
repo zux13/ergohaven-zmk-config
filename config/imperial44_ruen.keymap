@@ -132,7 +132,7 @@
 &kp ESC  &kp Q           &kp W           &kp E             &kp R        &kp T                                &kp Y  &kp U        &kp I              &kp O            &kp P               &kp BACKSPACE
 &kp TAB  &mt LEFT_GUI A  &mt LEFT_ALT S  &mt LEFT_SHIFT D  &mt LCTRL F  &kp G                                &kp H  &mt LCTRL J  &mt RIGHT_SHIFT K  &mt RIGHT_ALT L  &mt RIGHT_GUI SEMI  &kp ENTER
 &trans   &kp Z           &kp X           &kp C             &kp V        &kp B  &none        &kp PRINTSCREEN  &kp N  &kp M        &kp COMMA          &kp DOT          &kp SQT             &trans
-                                                           &caps_word   &mo 2  &kp SPACE    &kp SPACE        &mo 3  &to_ru
+                                                           &caps_word   &mo 2  &kp SPACE    &kp SPACE        &mo 4  &layer_ru
             >;
 
             display-name = "Base";
@@ -147,7 +147,7 @@
 &kp ESC             &kp RU_CYRILLIC_SHORT_I      &kp RU_CYRILLIC_TSE            &kp RU_CYRILLIC_U              &kp RU_CYRILLIC_KA       &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE      &kp RU_CYRILLIC_SHA             &kp RU_CYRILLIC_SHCHA         &kp RU_CYRILLIC_ZE             &kp BACKSPACE
 &kp TAB             &mt LEFT_GUI RU_CYRILLIC_EF  &mt LEFT_ALT RU_CYRILLIC_YERU  &mt LEFT_SHIFT RU_CYRILLIC_VE  &mt LCTRL RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &mt RCTRL RU_CYRILLIC_O  &mt RIGHT_SHIFT RU_CYRILLIC_EL  &mt RIGHT_ALT RU_CYRILLIC_DE  &mt RIGHT_GUI RU_CYRILLIC_ZHE  &kp ENTER
 &kp RU_CYRILLIC_IO  &kp RU_CYRILLIC_YA           &kp RU_CYRILLIC_CHE            &kp RU_CYRILLIC_ES             &kp RU_CYRILLIC_EM       &kp RU_CYRILLIC_I   &none        &trans     &kp RU_CYRILLIC_TE  &td_cyr_soft_sign        &kp RU_CYRILLIC_BE              &kp RU_CYRILLIC_YU            &kp RU_CYRILLIC_E              &kp RU_CYRILLIC_HA
-                                                                                                               &caps_word               &mo 2               &kp SPACE    &kp SPACE  &mo 4               &to_en
+                                                                                                               &caps_word               &mo 2               &kp SPACE    &kp SPACE  &mo 3               &layer_en
             >;
         };
 
