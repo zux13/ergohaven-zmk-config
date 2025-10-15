@@ -115,24 +115,6 @@
             tapping-term-ms = <200>;
         };
 
-        td_up_ctrl: td_up_ctrl {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_UP_CTRL";
-            #binding-cells = <0>;
-            bindings = <&kp UP>, <&kp LC(UP)>;
-
-            tapping-term-ms = <200>;
-        };
-
-        td_down_ctrl: td_down_ctrl {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_DOWN_CTRL";
-            #binding-cells = <0>;
-            bindings = <&kp DOWN>, <&kp LS(LC(DOWN))>;
-
-            tapping-term-ms = <200>;
-        };
-
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
             label = "HML";
@@ -191,10 +173,10 @@
 
         nav {
             bindings = <
-&trans          &none  &none          &none          &none           &none                              &kp PG_UP  &kp N7  &kp N8  &kp N9  &none         &kp DELETE
-&trans          &none  &kp HOME       &td_up_ctrl    &kp END         &kp INSERT                         &kp PG_DN  &kp N4  &kp N5  &kp N6  &kp NUMBER_0  &trans
-&kp LEFT_SHIFT  &none  &td_left_ctrl  &td_down_ctrl  &td_right_ctrl  &kp PAUSE_BREAK  &trans    &trans  &none      &kp N1  &kp N2  &kp N3  &none         &trans
-                                                     &trans          &trans           &trans    &trans  &mo 5      &trans
+&trans          &none  &none          &none     &none           &none                              &kp PG_UP  &kp N7  &kp N8  &kp N9  &none         &kp DELETE
+&trans          &none  &kp HOME       &kp UP    &kp END         &kp INSERT                         &kp PG_DN  &kp N4  &kp N5  &kp N6  &kp NUMBER_0  &trans
+&kp LEFT_SHIFT  &none  &td_left_ctrl  &kp DOWN  &td_right_ctrl  &kp PAUSE_BREAK  &trans    &trans  &none      &kp N1  &kp N2  &kp N3  &none         &trans
+                                                &trans          &trans           &trans    &trans  &mo 5      &trans
             >;
 
             display-name = "Navigation";
@@ -202,10 +184,10 @@
 
         sym_en {
             bindings = <
-&trans  &mt TILDE GRAVE  &kp CARET       &kp FSLH  &kp LESS_THAN     &kp AT_SIGN                      &kp LPAR     &kp LBKT           &kp LEFT_BRACE   &kp EXCL   &kp HASH   &trans
-&trans  &kp PLUS         &kp MINUS       &kp PIPE  &kp EQUAL         &kp PRCNT                        &mt SQT DQT  &kp DOT            &kp COMMA        &kp COLON  &kp SEMI   &trans
-&trans  &kp DOLLAR       &kp UNDERSCORE  &kp BSLH  &kp GREATER_THAN  &kp AMPERSAND  &trans    &trans  &kp RPAR     &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp QMARK  &kp ASTRK  &trans
-                                                   &trans            &mo 5          &trans    &trans  &trans       &trans
+&trans  &kp TILDE   &kp CARET       &kp FSLH  &kp LESS_THAN     &kp AT_SIGN                      &kp LPAR     &kp LBKT           &kp LEFT_BRACE   &kp EXCL   &kp HASH   &trans
+&trans  &kp PLUS    &kp MINUS       &kp PIPE  &kp EQUAL         &kp PRCNT                        &mt SQT DQT  &kp DOT            &kp COMMA        &kp COLON  &kp SEMI   &trans
+&trans  &kp DOLLAR  &kp UNDERSCORE  &kp BSLH  &kp GREATER_THAN  &kp AMPERSAND  &trans    &trans  &kp RPAR     &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp QMARK  &kp ASTRK  &trans
+                                              &trans            &mo 5          &trans    &trans  &trans       &trans
             >;
 
             display-name = "Symbols";
@@ -214,10 +196,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans  &en TILDE   &en CARET       &kp FSLH  &en LESS_THAN     &en AT_SIGN                      &kp LPAR              &en LBKT           &en LEFT_BRACE   &kp EXCL   &kp RU_NUMERO  &trans
-&trans  &kp PLUS    &kp MINUS       &en PIPE  &kp EQUAL         &kp PRCNT                        &kp RU_DOUBLE_QUOTES  &kp DOT            &kp COMMA        &kp COLON  &kp SEMI       &trans
-&trans  &en DOLLAR  &kp UNDERSCORE  &kp BSLH  &en GREATER_THAN  &en AMPERSAND  &trans    &trans  &kp RPAR              &en RIGHT_BRACKET  &en RIGHT_BRACE  &kp QMARK  &kp ASTRK      &trans
-                                              &trans            &mo 5          &trans    &trans  &trans                &trans
+&trans  &en TILDE   &en CARET       &en FSLH  &en LESS_THAN     &en AT_SIGN                      &kp LPAR     &en LBKT           &en LEFT_BRACE   &kp EXCL   &kp RU_NUMERO  &trans
+&trans  &kp PLUS    &kp MINUS       &en PIPE  &kp EQUAL         &kp PRCNT                        &en AT_SIGN  &kp SLASH          &kp QUESTION     &kp CARET  &kp DOLLAR     &trans
+&trans  &en DOLLAR  &kp UNDERSCORE  &kp BSLH  &en GREATER_THAN  &en AMPERSAND  &trans    &trans  &kp RPAR     &en RIGHT_BRACKET  &en RIGHT_BRACE  &kp QMARK  &kp ASTRK      &trans
+                                              &trans            &mo 5          &trans    &trans  &trans       &trans
             >;
         };
 
