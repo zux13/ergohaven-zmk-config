@@ -11,13 +11,13 @@
 
         cmben {
             bindings = <&layer_en>;
-            key-positions = <15 16>;
+            key-positions = <13 41>;
             layers = <1>;
         };
 
         cmbru {
             bindings = <&layer_ru>;
-            key-positions = <15 16>;
+            key-positions = <13 41>;
             layers = <0>;
         };
     };
@@ -196,10 +196,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans  &en TILDE   &en CARET       &en FSLH  &en LESS_THAN     &en AT_SIGN                      &kp LPAR     &en LBKT           &en LEFT_BRACE   &kp EXCL   &kp RU_NUMERO  &trans
-&trans  &kp PLUS    &kp MINUS       &en PIPE  &kp EQUAL         &kp PRCNT                        &en AT_SIGN  &kp SLASH          &kp QUESTION     &kp CARET  &kp DOLLAR     &trans
-&trans  &en DOLLAR  &kp UNDERSCORE  &kp BSLH  &en GREATER_THAN  &en AMPERSAND  &trans    &trans  &kp RPAR     &en RIGHT_BRACKET  &en RIGHT_BRACE  &kp QMARK  &kp ASTRK      &trans
-                                              &trans            &mo 5          &trans    &trans  &trans       &trans
+&trans  &en TILDE   &en CARET       &en FSLH  &en LESS_THAN     &en AT_SIGN                      &kp LPAR              &en LBKT           &en LEFT_BRACE   &kp EXCL       &kp RU_NUMERO  &trans
+&trans  &kp PLUS    &kp MINUS       &en PIPE  &kp EQUAL         &kp PRCNT                        &kp RU_DOUBLE_QUOTES  &kp SLASH          &kp QUESTION     &kp CARET      &kp DOLLAR     &trans
+&trans  &en DOLLAR  &kp UNDERSCORE  &kp BSLH  &en GREATER_THAN  &en AMPERSAND  &trans    &trans  &kp RPAR              &en RIGHT_BRACKET  &en RIGHT_BRACE  &kp AMPERSAND  &kp ASTRK      &trans
+                                              &trans            &mo 5          &trans    &trans  &trans                &trans
             >;
         };
 
