@@ -11,13 +11,13 @@
 
         cmben {
             bindings = <&layer_en>;
-            key-positions = <13 41>;
+            key-positions = <16 15>;
             layers = <1>;
         };
 
         cmbru {
             bindings = <&layer_ru>;
-            key-positions = <13 41>;
+            key-positions = <16 15>;
             layers = <0>;
         };
     };
@@ -26,7 +26,7 @@
         to_ru: to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N2))>;
+            bindings = <&kp LS(RC(N2))>;
             label = "TO_RU";
             wait-ms = <0>;
             tap-ms = <30>;
@@ -35,7 +35,7 @@
         to_en: to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N1))>;
+            bindings = <&kp LS(RC(N1))>;
             label = "TO_EN";
             wait-ms = <0>;
             tap-ms = <30>;
@@ -184,10 +184,10 @@
 
         sym_en {
             bindings = <
-&trans  &kp TILDE   &kp CARET       &kp FSLH  &kp LESS_THAN     &kp AT_SIGN                      &kp LPAR     &kp LBKT           &kp LEFT_BRACE   &kp EXCL   &kp HASH   &trans
-&trans  &kp PLUS    &kp MINUS       &kp PIPE  &kp EQUAL         &kp PRCNT                        &mt SQT DQT  &kp DOT            &kp COMMA        &kp COLON  &kp SEMI   &trans
-&trans  &kp DOLLAR  &kp UNDERSCORE  &kp BSLH  &kp GREATER_THAN  &kp AMPERSAND  &trans    &trans  &kp RPAR     &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp QMARK  &kp ASTRK  &trans
-                                              &trans            &mo 5          &trans    &trans  &trans       &trans
+&trans  &kp TILDE   &kp CARET       &kp FSLH  &kp LESS_THAN     &kp AT_SIGN                      &kp LPAR  &kp LBKT           &kp LEFT_BRACE   &kp EXCL   &kp HASH   &trans
+&trans  &kp PLUS    &kp MINUS       &kp PIPE  &kp EQUAL         &kp PRCNT                        &kp APOS  &kp DOT            &kp COMMA        &kp COLON  &kp SEMI   &trans
+&trans  &kp DOLLAR  &kp UNDERSCORE  &kp BSLH  &kp GREATER_THAN  &kp AMPERSAND  &trans    &trans  &kp RPAR  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp QMARK  &kp ASTRK  &trans
+                                              &trans            &mo 5          &trans    &trans  &trans    &trans
             >;
 
             display-name = "Symbols";
