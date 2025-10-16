@@ -98,39 +98,21 @@
         em_dash: em_dash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp C_MENU>,
-                <&macro_wait_time 10>,
-                <&kp MINUS>,
-                <&macro_wait_time 10>,
-                <&kp MINUS>;
-
+            bindings = <&kp C_MENU &kp MINUS &kp MINUS>;
             label = "EM_DASH";
         };
 
         en_dash_en: en_dash_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp C_MENU>,
-                <&macro_wait_time 10>,
-                <&kp MINUS>,
-                <&macro_wait_time 10>,
-                <&kp DOT>;
-
+            bindings = <&kp C_MENU &kp MINUS &kp DOT>;
             label = "EN_DASH_EN";
         };
 
         en_dash_ru: en_dash_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&kp C_MENU>,
-                <&macro_wait_time 10>,
-                <&kp MINUS>,
-                <&macro_wait_time 10>,
-                <&kp RU_DOT>;
-
+            bindings = <&kp C_MENU &kp MINUS &kp RU_DOT>;
             label = "EN_DASH_RU";
         };
     };
@@ -287,10 +269,10 @@
 
         sym_en {
             bindings = <
-&trans       &mt TILDE GRAVE     &kp CARET            &kp FSLH              &kp LESS_THAN            &kp AT_SIGN                      &kp LPAR      &kp LBKT                &kp LEFT_BRACE          &kp EXCL              &mt_ru_hold RU_NUMERO HASH  &trans
-&em_dash     &hml LEFT_GUI PLUS  &hml LEFT_ALT MINUS  &hml LEFT_SHIFT PIPE  &hml LEFT_CONTROL EQUAL  &kp PRCNT                        &mt APOS DQT  &hmr RIGHT_CONTROL DOT  &hmr RIGHT_SHIFT COMMA  &hmr RIGHT_ALT COLON  &hmr RIGHT_GUI SEMI         &trans
-&en_dash_en  &kp DOLLAR          &kp UNDERSCORE       &kp BSLH              &kp GREATER_THAN         &kp AMPERSAND  &trans    &trans  &kp RPAR      &kp RIGHT_BRACKET       &kp RIGHT_BRACE         &kp QMARK             &kp ASTRK                   &trans
-                                                                            &trans                   &mo 5          &trans    &trans  &trans        &trans
+&trans       &mt TILDE GRAVE     &kp CARET            &kp FSLH              &kp LESS_THAN            &kp AT_SIGN                          &kp LPAR      &kp LBKT                &kp LEFT_BRACE          &kp EXCL              &mt_ru_hold RU_NUMERO HASH  &trans
+&em_dash     &hml LEFT_GUI PLUS  &hml LEFT_ALT MINUS  &hml LEFT_SHIFT PIPE  &hml LEFT_CONTROL EQUAL  &kp PRCNT                            &mt APOS DQT  &hmr RIGHT_CONTROL DOT  &hmr RIGHT_SHIFT COMMA  &hmr RIGHT_ALT COLON  &hmr RIGHT_GUI SEMI         &trans
+&en_dash_en  &kp DOLLAR          &kp UNDERSCORE       &kp BSLH              &kp GREATER_THAN         &kp AMPERSAND  &kp K_MENU    &trans  &kp RPAR      &kp RIGHT_BRACKET       &kp RIGHT_BRACE         &kp QMARK             &kp ASTRK                   &trans
+                                                                            &trans                   &mo 5          &trans        &trans  &trans        &trans
             >;
 
             display-name = "Symbols";
@@ -299,10 +281,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans       &mt_en_hold_tap TILDE GRAVE  &en CARET            &en FSLH                 &en LESS_THAN            &en AT_SIGN                      &kp LPAR                          &en LBKT                  &en LEFT_BRACE             &kp EXCL              &mt_en_tap RU_NUMERO HASH  &trans
-&em_dash     &hml LEFT_GUI PLUS           &hml LEFT_ALT MINUS  &hml_en LEFT_SHIFT PIPE  &hml LEFT_CONTROL EQUAL  &kp PRCNT                        &mt_en_hold SQT RU_DOUBLE_QUOTES  &hmr RIGHT_CONTROL SLASH  &hmr RIGHT_SHIFT QUESTION  &hmr RIGHT_ALT CARET  &hmr RIGHT_GUI DOLLAR      &trans
-&en_dash_ru  &en DOLLAR                   &kp UNDERSCORE       &kp BSLH                 &en GREATER_THAN         &en AMPERSAND  &trans    &trans  &kp RPAR                          &en RIGHT_BRACKET         &en RIGHT_BRACE            &kp AMPERSAND         &kp ASTRK                  &trans
-                                                                                        &trans                   &mo 5          &trans    &trans  &trans                            &trans
+&trans       &mt_en_hold_tap TILDE GRAVE  &en CARET            &en FSLH                 &en LESS_THAN            &en AT_SIGN                          &kp LPAR                          &en LBKT                  &en LEFT_BRACE             &kp EXCL              &mt_en_tap RU_NUMERO HASH  &trans
+&em_dash     &hml LEFT_GUI PLUS           &hml LEFT_ALT MINUS  &hml_en LEFT_SHIFT PIPE  &hml LEFT_CONTROL EQUAL  &kp PRCNT                            &mt_en_hold SQT RU_DOUBLE_QUOTES  &hmr RIGHT_CONTROL SLASH  &hmr RIGHT_SHIFT QUESTION  &hmr RIGHT_ALT CARET  &hmr RIGHT_GUI DOLLAR      &trans
+&en_dash_ru  &en DOLLAR                   &kp UNDERSCORE       &kp BSLH                 &en GREATER_THAN         &en AMPERSAND  &kp C_MENU    &trans  &kp RPAR                          &en RIGHT_BRACKET         &en RIGHT_BRACE            &kp AMPERSAND         &kp ASTRK                  &trans
+                                                                                        &trans                   &mo 5          &trans        &trans  &trans                            &trans
             >;
         };
 
