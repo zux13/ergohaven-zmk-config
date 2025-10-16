@@ -95,18 +95,43 @@
             tap-ms = <30>;
         };
 
-        mouse_scroll_up: mouse_scroll_up {
+        em_dash: em_dash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&msc SCRL_UP>;
-            label = "MOUSE_SCROLL_UP";
+            bindings =
+                <&kp C_MENU>,
+                <&macro_wait_time 10>,
+                <&kp MINUS>,
+                <&macro_wait_time 10>,
+                <&kp MINUS>;
+
+            label = "EM_DASH";
         };
 
-        mouse_scroll_down: mouse_scroll_down {
+        en_dash_en: en_dash_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&msc SCRL_DOWN>;
-            label = "MOUSE_SCROLL_DOWN";
+            bindings =
+                <&kp C_MENU>,
+                <&macro_wait_time 10>,
+                <&kp MINUS>,
+                <&macro_wait_time 10>,
+                <&kp DOT>;
+
+            label = "EN_DASH_EN";
+        };
+
+        en_dash_ru: en_dash_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp C_MENU>,
+                <&macro_wait_time 10>,
+                <&kp MINUS>,
+                <&macro_wait_time 10>,
+                <&kp RU_DOT>;
+
+            label = "EN_DASH_RU";
         };
     };
 
@@ -185,13 +210,6 @@
             hold-trigger-key-positions = <1 2 3 4 13 14 15 16 25 26 27 28 5 17 29 24>;
         };
 
-        encoder_mouse_scrolls: encoder_mouse_scrolls {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_MOUSE_SCROLLS";
-            #sensor-binding-cells = <0>;
-            bindings = <&mouse_scroll_up>, <&mouse_scroll_down>;
-        };
-
         mt_en_hold: mt_en_hold {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_EN_HOLD";
@@ -243,7 +261,7 @@
             display-name = "Base";
             sensor-bindings =
                 <&inc_dec_kp PAGE_UP PAGE_DOWN>,
-                <&encoder_mouse_scrolls>;
+                <&inc_dec_kp RC(PG_UP) PAGE_DOWN>;
         };
 
         ru {
@@ -269,10 +287,10 @@
 
         sym_en {
             bindings = <
-&trans  &mt TILDE GRAVE     &kp CARET            &kp FSLH              &kp LESS_THAN            &kp AT_SIGN                      &kp LPAR      &kp LBKT                &kp LEFT_BRACE          &kp EXCL              &mt_ru_hold RU_NUMERO HASH  &trans
-&trans  &hml LEFT_GUI PLUS  &hml LEFT_ALT MINUS  &hml LEFT_SHIFT PIPE  &hml LEFT_CONTROL EQUAL  &kp PRCNT                        &mt APOS DQT  &hmr RIGHT_CONTROL DOT  &hmr RIGHT_SHIFT COMMA  &hmr RIGHT_ALT COLON  &hmr RIGHT_GUI SEMI         &trans
-&trans  &kp DOLLAR          &kp UNDERSCORE       &kp BSLH              &kp GREATER_THAN         &kp AMPERSAND  &trans    &trans  &kp RPAR      &kp RIGHT_BRACKET       &kp RIGHT_BRACE         &kp QMARK             &kp ASTRK                   &trans
-                                                                       &trans                   &mo 5          &trans    &trans  &trans        &trans
+&trans       &mt TILDE GRAVE     &kp CARET            &kp FSLH              &kp LESS_THAN            &kp AT_SIGN                      &kp LPAR      &kp LBKT                &kp LEFT_BRACE          &kp EXCL              &mt_ru_hold RU_NUMERO HASH  &trans
+&em_dash     &hml LEFT_GUI PLUS  &hml LEFT_ALT MINUS  &hml LEFT_SHIFT PIPE  &hml LEFT_CONTROL EQUAL  &kp PRCNT                        &mt APOS DQT  &hmr RIGHT_CONTROL DOT  &hmr RIGHT_SHIFT COMMA  &hmr RIGHT_ALT COLON  &hmr RIGHT_GUI SEMI         &trans
+&en_dash_en  &kp DOLLAR          &kp UNDERSCORE       &kp BSLH              &kp GREATER_THAN         &kp AMPERSAND  &trans    &trans  &kp RPAR      &kp RIGHT_BRACKET       &kp RIGHT_BRACE         &kp QMARK             &kp ASTRK                   &trans
+                                                                            &trans                   &mo 5          &trans    &trans  &trans        &trans
             >;
 
             display-name = "Symbols";
@@ -281,10 +299,10 @@
         sym_ru {
             display-name = "Symbols";
             bindings = <
-&trans  &mt_en_hold_tap TILDE GRAVE  &en CARET            &en FSLH                 &en LESS_THAN            &en AT_SIGN                      &kp LPAR                          &en LBKT                  &en LEFT_BRACE             &kp EXCL              &mt_en_tap RU_NUMERO HASH  &trans
-&trans  &hml LEFT_GUI PLUS           &hml LEFT_ALT MINUS  &hml_en LEFT_SHIFT PIPE  &hml LEFT_CONTROL EQUAL  &kp PRCNT                        &mt_en_hold SQT RU_DOUBLE_QUOTES  &hmr RIGHT_CONTROL SLASH  &hmr RIGHT_SHIFT QUESTION  &hmr RIGHT_ALT CARET  &hmr RIGHT_GUI DOLLAR      &trans
-&trans  &en DOLLAR                   &kp UNDERSCORE       &kp BSLH                 &en GREATER_THAN         &en AMPERSAND  &trans    &trans  &kp RPAR                          &en RIGHT_BRACKET         &en RIGHT_BRACE            &kp AMPERSAND         &kp ASTRK                  &trans
-                                                                                   &trans                   &mo 5          &trans    &trans  &trans                            &trans
+&trans       &mt_en_hold_tap TILDE GRAVE  &en CARET            &en FSLH                 &en LESS_THAN            &en AT_SIGN                      &kp LPAR                          &en LBKT                  &en LEFT_BRACE             &kp EXCL              &mt_en_tap RU_NUMERO HASH  &trans
+&em_dash     &hml LEFT_GUI PLUS           &hml LEFT_ALT MINUS  &hml_en LEFT_SHIFT PIPE  &hml LEFT_CONTROL EQUAL  &kp PRCNT                        &mt_en_hold SQT RU_DOUBLE_QUOTES  &hmr RIGHT_CONTROL SLASH  &hmr RIGHT_SHIFT QUESTION  &hmr RIGHT_ALT CARET  &hmr RIGHT_GUI DOLLAR      &trans
+&en_dash_ru  &en DOLLAR                   &kp UNDERSCORE       &kp BSLH                 &en GREATER_THAN         &en AMPERSAND  &trans    &trans  &kp RPAR                          &en RIGHT_BRACKET         &en RIGHT_BRACE            &kp AMPERSAND         &kp ASTRK                  &trans
+                                                                                        &trans                   &mo 5          &trans    &trans  &trans                            &trans
             >;
         };
 
