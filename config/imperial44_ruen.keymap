@@ -252,7 +252,8 @@
             bindings = <&em_dash>, <&minus_dash_en>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
         };
 
         mt_dash_ru: mt_dash_ru {
@@ -261,7 +262,8 @@
             bindings = <&em_dash>, <&minus_dash_ru>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
         };
     };
 
