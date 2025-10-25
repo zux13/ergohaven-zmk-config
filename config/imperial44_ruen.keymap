@@ -270,7 +270,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_SOFT_HARD_SIGN";
             #binding-cells = <0>;
-            tapping-term-ms = <280>;
+            tapping-term-ms = <200>;
             bindings = <&kp RU_CYRILLIC_SOFT_SIGN>, <&kp RU_CYRILLIC_HARD_SIGN>;
         };
     };
