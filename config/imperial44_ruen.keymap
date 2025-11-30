@@ -112,7 +112,7 @@
                                         &trans         &trans   &trans    &trans  &mo 5            &trans
             >;
 
-            display-name = "Navigation";
+            display-name = "Nav";
         };
 
         sym_en {
