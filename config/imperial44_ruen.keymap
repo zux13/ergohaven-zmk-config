@@ -115,6 +115,13 @@
             bindings = <&kp RIGHT_ALT &kp MINUS &kp MINUS &kp RU_DOT>;
             label = "EN_DASH_RU";
         };
+
+        word_select_and_copy: word_select_and_copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(W) &kp LC(C)>;
+            label = "WORD_SELECT_AND_COPY";
+        };
     };
 
     behaviors {
@@ -298,16 +305,16 @@
 &kp ESC    &kp RU_CYRILLIC_SHORT_I       &kp RU_CYRILLIC_TSE             &kp RU_CYRILLIC_U               &kp RU_CYRILLIC_KA        &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE       &kp RU_CYRILLIC_SHA              &kp RU_CYRILLIC_SHCHA         &kp RU_CYRILLIC_ZE              &kp BACKSPACE
 &kp TAB    &hml LEFT_GUI RU_CYRILLIC_EF  &hml LEFT_ALT RU_CYRILLIC_YERU  &hml LEFT_SHIFT RU_CYRILLIC_VE  &hml LCTRL RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &hmr RCTRL RU_CYRILLIC_O  &hmr RIGHT_SHIFT RU_CYRILLIC_EL  &hmr LEFT_ALT RU_CYRILLIC_DE  &hmr RIGHT_GUI RU_CYRILLIC_ZHE  &kp ENTER
 &kp GRAVE  &kp RU_CYRILLIC_YA            &kp RU_CYRILLIC_CHE             &kp RU_CYRILLIC_ES              &kp RU_CYRILLIC_EM        &kp RU_CYRILLIC_I   &tog 6       &trans     &kp RU_CYRILLIC_TE  &td_soft_hard_sign        &kp RU_CYRILLIC_BE               &kp RU_CYRILLIC_YU            &kp RU_CYRILLIC_E               &kp LEFT_BRACKET
-                                                                                                         &caps_word                &mo 2               &kp SPACE    &kp SPACE  &mo 4               &layer_en
+                                                                                                         &kp CLCK                  &mo 2               &kp SPACE    &kp SPACE  &mo 4               &layer_en
             >;
         };
 
         nav {
             bindings = <
-&trans  &none                   &none               &none               &none                  &none                              &kp PG_UP  &kp N7                       &kp N8                     &kp N9                  &none                    &kp DELETE
-&trans  &hml LEFT_GUI LEFT_GUI  &hml LEFT_ALT HOME  &hml LEFT_SHIFT UP  &hml LEFT_CONTROL END  &kp INSERT                         &kp PG_DN  &hmr RIGHT_CONTROL NUMBER_4  &hmr RIGHT_SHIFT NUMBER_5  &hmr LEFT_ALT NUMBER_6  &hmr RIGHT_GUI NUMBER_0  &trans
-&trans  &none                   &td_left_ctrl       &kp DOWN            &td_right_ctrl         &kp PAUSE_BREAK  &trans    &trans  &none      &kp N1                       &kp N2                     &kp N3                  &none                    &trans
-                                                                        &trans                 &trans           &trans    &trans  &mo 5      &trans
+&trans  &none                   &none               &none               &none                  &none                              &none                  &kp N7                       &kp N8                     &kp N9                  &none                    &kp DELETE
+&trans  &hml LEFT_GUI LEFT_GUI  &hml LEFT_ALT HOME  &hml LEFT_SHIFT UP  &hml LEFT_CONTROL END  &kp INSERT                         &word_select_and_copy  &hmr RIGHT_CONTROL NUMBER_4  &hmr RIGHT_SHIFT NUMBER_5  &hmr LEFT_ALT NUMBER_6  &hmr RIGHT_GUI NUMBER_0  &trans
+&trans  &none                   &td_left_ctrl       &kp DOWN            &td_right_ctrl         &kp PAUSE_BREAK  &trans    &trans  &kp LC(V)              &kp N1                       &kp N2                     &kp N3                  &none                    &trans
+                                                                        &trans                 &trans           &trans    &trans  &mo 5                  &trans
             >;
 
             display-name = "Navigation";
