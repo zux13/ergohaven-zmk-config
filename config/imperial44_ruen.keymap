@@ -122,6 +122,111 @@
             bindings = <&kp LC(W) &kp LC(C)>;
             label = "WORD_SELECT_AND_COPY";
         };
+
+        oneC_cycle_for: oneC_cycle_for {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_DE &kp RU_CYRILLIC_EL &kp RU_CYRILLIC_YA &kp ENTER>;
+            label = "ONEC_CYCLE_FOR";
+        };
+
+        oneC_cycle_each: oneC_cycle_each {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_KA &kp RU_CYRILLIC_A &kp RU_CYRILLIC_ZHE &kp ENTER>;
+            label = "ONEC_CYCLE_EACH";
+        };
+
+        oneC_cycle_while: oneC_cycle_while {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_PE &kp RU_CYRILLIC_O &kp RU_CYRILLIC_KA &kp RU_CYRILLIC_A &kp ENTER>;
+            label = "ONEC_CYCLE_WHILE";
+        };
+
+        oneC_if: oneC_if {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_IE &kp RU_CYRILLIC_ES &kp RU_CYRILLIC_EL &kp RU_CYRILLIC_I &kp ENTER>;
+            label = "ONEC_IF";
+        };
+
+        oneC_else: oneC_else {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_IE &kp RU_CYRILLIC_ES &kp RU_CYRILLIC_EL &kp RU_CYRILLIC_I &kp RU_CYRILLIC_I &kp RU_CYRILLIC_EN &kp ENTER>;
+            label = "ONEC_ELSE";
+        };
+
+        oneC_ternary: oneC_ternary {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_TE &kp RU_CYRILLIC_IE &kp RU_CYRILLIC_ER &kp RU_CYRILLIC_EN &kp ENTER>;
+            label = "ONEC_TERNARY";
+        };
+
+        oneC_ins_if: oneC_ins_if {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_I &kp RU_CYRILLIC_EN &kp RU_CYRILLIC_ES &kp RU_CYRILLIC_TE &kp ENTER>;
+            label = "ONEC_INS_IF";
+        };
+
+        oneC_ins_obl: oneC_ins_obl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_O &kp RU_CYRILLIC_BE &kp RU_CYRILLIC_EL &kp ENTER>;
+            label = "ONEC_INS_OBL";
+        };
+
+        oneC_dir: oneC_dir {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_DE &kp RU_CYRILLIC_I &kp RU_CYRILLIC_ER &kp ENTER>;
+            label = "ONEC_DIR";
+        };
+
+        oneC_try: oneC_try {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_PE &kp RU_CYRILLIC_O &kp RU_CYRILLIC_PE &kp RU_CYRILLIC_YERU &kp ENTER>;
+            label = "ONEC_TRY";
+        };
+
+        oneC_transaction: oneC_transaction {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_TE &kp RU_CYRILLIC_ER &kp RU_CYRILLIC_A &kp RU_CYRILLIC_EN &kp ENTER>;
+            label = "ONEC_TRANSACTION";
+        };
+
+        oneC_request: oneC_request {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_ZE &kp RU_CYRILLIC_A &kp RU_CYRILLIC_PE &kp RU_CYRILLIC_ER &kp ENTER>;
+            label = "ONEC_REQUEST";
+        };
+
+        oneC_message: oneC_message {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_ES &kp RU_CYRILLIC_O &kp RU_CYRILLIC_O &kp RU_CYRILLIC_BE &kp RU_CYRILLIC_SHCHA &kp ENTER>;
+            label = "ONEC_MESSAGE";
+        };
+
+        oneC_func: oneC_func {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_EF &kp RU_CYRILLIC_U &kp RU_CYRILLIC_EN &kp ENTER>;
+            label = "ONEC_FUNC";
+        };
+
+        oneC_proc: oneC_proc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_PE &kp RU_CYRILLIC_ER &kp RU_CYRILLIC_O &kp ENTER>;
+            label = "ONEC_PROC";
+        };
     };
 
     behaviors {
@@ -321,9 +426,9 @@
 
         nav {
             bindings = <
-&trans  &none                   &none               &none               &none                  &none                              &none                  &kp N7                       &kp N8                     &kp N9                  &none                    &kp DELETE
-&trans  &hml LEFT_GUI LEFT_GUI  &hml LEFT_ALT HOME  &hml LEFT_SHIFT UP  &hml LEFT_CONTROL END  &kp INSERT                         &word_select_and_copy  &hmr RIGHT_CONTROL NUMBER_4  &hmr RIGHT_SHIFT NUMBER_5  &hmr LEFT_ALT NUMBER_6  &hmr RIGHT_GUI NUMBER_0  &trans
-&trans  &none                   &td_left_ctrl       &kp DOWN            &td_right_ctrl         &kp PAUSE_BREAK  &trans    &trans  &kp LC(V)              &kp N1                       &kp N2                     &kp N3                  &none                    &trans
+&trans  &none                   &none               &none               &none                  &none                              &word_select_and_copy  &kp N7                       &kp N8                     &kp N9                  &none                    &kp DELETE
+&trans  &hml LEFT_GUI LEFT_GUI  &hml LEFT_ALT HOME  &hml LEFT_SHIFT UP  &hml LEFT_CONTROL END  &kp INSERT                         &kp LC(V)              &hmr RIGHT_CONTROL NUMBER_4  &hmr RIGHT_SHIFT NUMBER_5  &hmr LEFT_ALT NUMBER_6  &hmr RIGHT_GUI NUMBER_0  &trans
+&trans  &none                   &td_left_ctrl       &kp DOWN            &td_right_ctrl         &kp PAUSE_BREAK  &trans    &trans  &none                  &kp N1                       &kp N2                     &kp N3                  &none                    &trans
                                                                         &trans                 &trans           &trans    &trans  &mo 5                  &trans
             >;
 
@@ -386,10 +491,10 @@
 
         macro {
             bindings = <
-&none  &none  &none  &none  &none  &none                  &none  &none            &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none                  &none  &kp PRINTSCREEN  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none  &none    &none  &none  &none            &none  &none  &none  &none
-                            &none  &none  &none    &none  &none  &none
+&none  &none  &none  &none  &none  &none                  &oneC_if       &oneC_cycle_for    &oneC_func  &oneC_try          &oneC_message  &none
+&none  &none  &none  &none  &none  &none                  &oneC_else     &oneC_cycle_each   &oneC_proc  &oneC_transaction  &oneC_ins_obl  &none
+&none  &none  &none  &none  &none  &none  &none    &none  &oneC_ternary  &oneC_cycle_while  &oneC_dir   &oneC_request      &oneC_ins_if   &none
+                            &none  &none  &none    &none  &none          &none
             >;
 
             label = "Macro";
