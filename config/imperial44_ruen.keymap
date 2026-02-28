@@ -122,111 +122,6 @@
             bindings = <&kp LC(W) &kp LC(C)>;
             label = "WORD_SELECT_AND_COPY";
         };
-
-        oneC_cycle_for: oneC_cycle_for {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_DE &kp RU_CYRILLIC_EL &kp RU_CYRILLIC_YA &kp ENTER>;
-            label = "ONEC_CYCLE_FOR";
-        };
-
-        oneC_cycle_each: oneC_cycle_each {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_KA &kp RU_CYRILLIC_A &kp RU_CYRILLIC_ZHE &kp ENTER>;
-            label = "ONEC_CYCLE_EACH";
-        };
-
-        oneC_cycle_while: oneC_cycle_while {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_PE &kp RU_CYRILLIC_O &kp RU_CYRILLIC_KA &kp RU_CYRILLIC_A &kp ENTER>;
-            label = "ONEC_CYCLE_WHILE";
-        };
-
-        oneC_if: oneC_if {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_IE &kp RU_CYRILLIC_ES &kp RU_CYRILLIC_EL &kp RU_CYRILLIC_I &kp ENTER>;
-            label = "ONEC_IF";
-        };
-
-        oneC_else: oneC_else {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_IE &kp RU_CYRILLIC_ES &kp RU_CYRILLIC_EL &kp RU_CYRILLIC_I &kp RU_CYRILLIC_I &kp RU_CYRILLIC_EN &kp ENTER>;
-            label = "ONEC_ELSE";
-        };
-
-        oneC_ternary: oneC_ternary {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_TE &kp RU_CYRILLIC_IE &kp RU_CYRILLIC_ER &kp RU_CYRILLIC_EN &kp ENTER>;
-            label = "ONEC_TERNARY";
-        };
-
-        oneC_ins_if: oneC_ins_if {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_I &kp RU_CYRILLIC_EN &kp RU_CYRILLIC_ES &kp RU_CYRILLIC_TE &kp ENTER>;
-            label = "ONEC_INS_IF";
-        };
-
-        oneC_ins_obl: oneC_ins_obl {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_O &kp RU_CYRILLIC_BE &kp RU_CYRILLIC_EL &kp ENTER>;
-            label = "ONEC_INS_OBL";
-        };
-
-        oneC_dir: oneC_dir {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_DE &kp RU_CYRILLIC_I &kp RU_CYRILLIC_ER &kp ENTER>;
-            label = "ONEC_DIR";
-        };
-
-        oneC_try: oneC_try {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_PE &kp RU_CYRILLIC_O &kp RU_CYRILLIC_PE &kp RU_CYRILLIC_YERU &kp ENTER>;
-            label = "ONEC_TRY";
-        };
-
-        oneC_transaction: oneC_transaction {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_TE &kp RU_CYRILLIC_ER &kp RU_CYRILLIC_A &kp RU_CYRILLIC_EN &kp ENTER>;
-            label = "ONEC_TRANSACTION";
-        };
-
-        oneC_request: oneC_request {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_ZE &kp RU_CYRILLIC_A &kp RU_CYRILLIC_PE &kp RU_CYRILLIC_ER &kp ENTER>;
-            label = "ONEC_REQUEST";
-        };
-
-        oneC_message: oneC_message {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_ES &kp RU_CYRILLIC_O &kp RU_CYRILLIC_O &kp RU_CYRILLIC_BE &kp RU_CYRILLIC_SHCHA &kp ENTER>;
-            label = "ONEC_MESSAGE";
-        };
-
-        oneC_func: oneC_func {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_EF &kp RU_CYRILLIC_U &kp RU_CYRILLIC_EN &kp ENTER>;
-            label = "ONEC_FUNC";
-        };
-
-        oneC_proc: oneC_proc {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp RU_CYRILLIC_PE &kp RU_CYRILLIC_ER &kp RU_CYRILLIC_O &kp ENTER>;
-            label = "ONEC_PROC";
-        };
     };
 
     behaviors {
@@ -236,7 +131,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_ARROW>, <&kp LC(LEFT)>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <280>;
         };
 
         td_right_ctrl: td_right_ctrl {
@@ -245,7 +140,7 @@
             #binding-cells = <0>;
             bindings = <&kp RIGHT_ARROW>, <&kp LC(RIGHT_ARROW)>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <280>;
         };
 
         hml: hml {
@@ -282,10 +177,10 @@
             bindings = <&kp>, <&en>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <230>;
+            tapping-term-ms = <180>;
             flavor = "balanced";
-            require-prior-idle-ms = <130>;
-            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            quick-tap-ms = <180>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <6 18 32 33 19 7 6 7 8 9 10 18 19 20 21 22 32 33 34 35 36 37 23 11>;
         };
@@ -296,10 +191,10 @@
             bindings = <&kp>, <&en>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <230>;
+            tapping-term-ms = <180>;
             flavor = "balanced";
-            require-prior-idle-ms = <130>;
-            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            quick-tap-ms = <180>;
             hold-trigger-on-release;
             hold-trigger-key-positions = <2 3 4 13 14 15 16 25 26 27 28 5 17 29 24 12 1 0>;
         };
@@ -385,31 +280,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp RU_CYRILLIC_SOFT_SIGN>, <&kp RU_CYRILLIC_HARD_SIGN>;
         };
-
-        hml_mo: hml_mo {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HML_MO";
-            #binding-cells = <2>;
-            tapping-term-ms = <230>;
-            flavor = "balanced";
-            require-prior-idle-ms = <130>;
-            quick-tap-ms = <175>;
-            hold-trigger-on-release;
-            hold-trigger-key-positions = <6 18 32 33 19 7 6 7 8 9 10 18 19 20 21 22 32 33 34 35 36 37 23 11>;
-            bindings = <&mo>, <&kp>;
-        };
-
-        ht_layers_toggle: ht_layers_toggle {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_LAYERS_TOGGLE";
-            #binding-cells = <2>;
-            tapping-term-ms = <230>;
-            flavor = "balanced";
-            require-prior-idle-ms = <130>;
-            quick-tap-ms = <175>;
-            hold-trigger-on-release;
-            bindings = <&tog>, <&tog>;
-        };
     };
 
     keymap {
@@ -417,10 +287,10 @@
 
         en {
             bindings = <
-&kp ESC  &kp Q            &kp W            &kp E              &kp R         &kp T                                                  &kp Y  &kp U         &kp I               &kp O            &kp P                &kp BACKSPACE
-&kp TAB  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LCTRL F  &hml_mo 8 G                                            &kp H  &hmr LCTRL J  &hmr RIGHT_SHIFT K  &hmr LEFT_ALT L  &hmr RIGHT_GUI SEMI  &kp ENTER
-&none    &kp Z            &kp X            &kp C              &kp V         &kp B        &ht_layers_toggle 9 6    &kp PRINTSCREEN  &kp N  &kp M         &kp COMMA           &kp DOT          &kp SQT              &none
-                                                              &caps_word    &mo 2        &kp SPACE                &kp SPACE        &mo 3  &layer_ru
+&kp ESC  &kp Q            &kp W            &kp E              &kp R         &kp T                                &kp Y  &kp U         &kp I               &kp O            &kp P                &kp BACKSPACE
+&kp TAB  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LCTRL F  &kp G                                &kp H  &hmr LCTRL J  &hmr RIGHT_SHIFT K  &hmr LEFT_ALT L  &hmr RIGHT_GUI SEMI  &kp ENTER
+&none    &kp Z            &kp X            &kp C              &kp V         &kp B  &tog 6       &kp PRINTSCREEN  &kp N  &kp M         &kp COMMA           &kp DOT          &kp SQT              &none
+                                                              &caps_word    &mo 2  &kp SPACE    &kp SPACE        &mo 3  &layer_ru
             >;
 
             display-name = "En Base";
@@ -432,10 +302,10 @@
         ru {
             display-name = "Ru Base";
             bindings = <
-&kp ESC    &kp RU_CYRILLIC_SHORT_I       &kp RU_CYRILLIC_TSE             &kp RU_CYRILLIC_U               &kp RU_CYRILLIC_KA        &kp RU_CYRILLIC_IE                                &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE       &kp RU_CYRILLIC_SHA              &kp RU_CYRILLIC_SHCHA         &kp RU_CYRILLIC_ZE              &kp BACKSPACE
-&kp TAB    &hml LEFT_GUI RU_CYRILLIC_EF  &hml LEFT_ALT RU_CYRILLIC_YERU  &hml LEFT_SHIFT RU_CYRILLIC_VE  &hml LCTRL RU_CYRILLIC_A  &hml_mo 8 RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &hmr RCTRL RU_CYRILLIC_O  &hmr RIGHT_SHIFT RU_CYRILLIC_EL  &hmr LEFT_ALT RU_CYRILLIC_DE  &hmr RIGHT_GUI RU_CYRILLIC_ZHE  &kp ENTER
-&kp GRAVE  &kp RU_CYRILLIC_YA            &kp RU_CYRILLIC_CHE             &kp RU_CYRILLIC_ES              &kp RU_CYRILLIC_EM        &kp RU_CYRILLIC_I         &trans       &trans     &kp RU_CYRILLIC_TE  &td_soft_hard_sign        &kp RU_CYRILLIC_BE               &kp RU_CYRILLIC_YU            &kp RU_CYRILLIC_E               &kp LEFT_BRACKET
-                                                                                                         &kp CLCK                  &mo 2                     &kp SPACE    &kp SPACE  &mo 4               &layer_en
+&kp ESC    &kp RU_CYRILLIC_SHORT_I       &kp RU_CYRILLIC_TSE             &kp RU_CYRILLIC_U               &kp RU_CYRILLIC_KA        &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE       &kp RU_CYRILLIC_SHA              &kp RU_CYRILLIC_SHCHA         &kp RU_CYRILLIC_ZE              &kp BACKSPACE
+&kp TAB    &hml LEFT_GUI RU_CYRILLIC_EF  &hml LEFT_ALT RU_CYRILLIC_YERU  &hml LEFT_SHIFT RU_CYRILLIC_VE  &hml LCTRL RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &hmr RCTRL RU_CYRILLIC_O  &hmr RIGHT_SHIFT RU_CYRILLIC_EL  &hmr LEFT_ALT RU_CYRILLIC_DE  &hmr RIGHT_GUI RU_CYRILLIC_ZHE  &kp ENTER
+&kp GRAVE  &kp RU_CYRILLIC_YA            &kp RU_CYRILLIC_CHE             &kp RU_CYRILLIC_ES              &kp RU_CYRILLIC_EM        &kp RU_CYRILLIC_I   &trans       &trans     &kp RU_CYRILLIC_TE  &td_soft_hard_sign        &kp RU_CYRILLIC_BE               &kp RU_CYRILLIC_YU            &kp RU_CYRILLIC_E               &kp LEFT_BRACKET
+                                                                                                         &kp CLCK                  &mo 2               &kp SPACE    &kp SPACE  &mo 4               &layer_en
             >;
         };
 
@@ -443,7 +313,7 @@
             bindings = <
 &trans  &none                   &none               &none               &none                  &none                              &word_select_and_copy  &kp N7                       &kp N8                     &kp N9                  &none                    &kp DELETE
 &trans  &hml LEFT_GUI LEFT_GUI  &hml LEFT_ALT HOME  &hml LEFT_SHIFT UP  &hml LEFT_CONTROL END  &kp INSERT                         &kp LC(V)              &hmr RIGHT_CONTROL NUMBER_4  &hmr RIGHT_SHIFT NUMBER_5  &hmr LEFT_ALT NUMBER_6  &hmr RIGHT_GUI NUMBER_0  &trans
-&trans  &none                   &td_left_ctrl       &kp DOWN            &td_right_ctrl         &kp PAUSE_BREAK  &trans    &trans  &kp LA(LS(F))          &kp N1                       &kp N2                     &kp N3                  &none                    &trans
+&trans  &kp LEFT_CONTROL        &td_left_ctrl       &kp DOWN            &td_right_ctrl         &kp PAUSE_BREAK  &trans    &trans  &kp LA(LS(F))          &kp N1                       &kp N2                     &kp N3                  &none                    &trans
                                                                         &trans                 &trans           &trans    &trans  &mo 5                  &trans
             >;
 
@@ -502,28 +372,6 @@
             >;
 
             label = "Gaming 2";
-        };
-
-        macro {
-            bindings = <
-&none  &none  &none  &none  &none  &none                  &oneC_if       &oneC_cycle_for    &oneC_func  &oneC_try          &oneC_message  &none
-&none  &none  &none  &none  &none  &none                  &oneC_else     &oneC_cycle_each   &oneC_proc  &oneC_transaction  &oneC_ins_obl  &none
-&none  &none  &none  &none  &none  &none  &none    &none  &oneC_ternary  &oneC_cycle_while  &oneC_dir   &oneC_request      &oneC_ins_if   &none
-                            &none  &none  &none    &none  &none          &none
-            >;
-
-            label = "Macro";
-        };
-
-        RuAlt {
-            bindings = <
-&trans                 &kp RU_CYRILLIC_EF            &kp RU_CYRILLIC_YU            &kp RU_CYRILLIC_A              &kp RU_CYRILLIC_I          &kp RU_CYRILLIC_E                                  &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_EM         &kp RU_CYRILLIC_EN               &kp RU_CYRILLIC_KA            &kp RU_CYRILLIC_ZE              &trans
-&trans                 &hml LEFT_WIN RU_CYRILLIC_YA  &hml LEFT_ALT RU_CYRILLIC_ES  &hml LEFT_SHIFT RU_CYRILLIC_O  &hml LCTRL RU_CYRILLIC_IE  &hml_mo 8 RU_CYRILLIC_SOFT_SIGN                    &kp RU_CYRILLIC_GHE  &hmr RCTRL RU_CYRILLIC_TE  &hmr RIGHT_SHIFT RU_CYRILLIC_ER  &hmr LEFT_ALT RU_CYRILLIC_VE  &hmr RIGHT_WIN RU_CYRILLIC_CHE  &trans
-&kp RU_CYRILLIC_SHCHA  &kp RU_CYRILLIC_SHORT_I       &kp RU_CYRILLIC_TSE           &kp RU_CYRILLIC_YERU           &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_IO               &trans    &trans  &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_DE         &kp RU_CYRILLIC_EL               &kp RU_CYRILLIC_PE            &kp RU_CYRILLIC_ZHE             &kp RU_CYRILLIC_HA
-                                                                                                                  &trans                     &mo 2                            &trans    &trans  &mo 4                &trans
-            >;
-
-            label = "Shaman";
         };
     };
 };
