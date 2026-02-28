@@ -131,7 +131,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_ARROW>, <&kp LC(LEFT)>;
 
-            tapping-term-ms = <280>;
+            tapping-term-ms = <240>;
         };
 
         td_right_ctrl: td_right_ctrl {
@@ -140,7 +140,7 @@
             #binding-cells = <0>;
             bindings = <&kp RIGHT_ARROW>, <&kp LC(RIGHT_ARROW)>;
 
-            tapping-term-ms = <280>;
+            tapping-term-ms = <240>;
         };
 
         hml: hml {
