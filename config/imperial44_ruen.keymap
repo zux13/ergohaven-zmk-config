@@ -289,8 +289,8 @@
             bindings = <
 &kp ESC  &kp Q            &kp W            &kp E              &kp R         &kp T                                &kp Y  &kp U         &kp I               &kp O            &kp P                &kp BACKSPACE
 &kp TAB  &hml LEFT_GUI A  &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LCTRL F  &kp G                                &kp H  &hmr LCTRL J  &hmr RIGHT_SHIFT K  &hmr LEFT_ALT L  &hmr RIGHT_GUI SEMI  &kp ENTER
-&none    &kp Z            &kp X            &kp C              &kp V         &kp B  &tog 6       &kp PRINTSCREEN  &kp N  &kp M         &kp COMMA           &kp DOT          &kp SQT              &none
-                                                              &caps_word    &mo 2  &kp SPACE    &kp SPACE        &mo 3  &layer_ru
+&none    &kp Z            &kp X            &kp C              &kp V         &kp B  &kp PRINTSCREEN    &tog 6     &kp N  &kp M         &kp COMMA           &kp DOT          &kp SQT              &none
+                                                              &caps_word    &mo 2  &kp SPACE          &kp SPACE  &mo 3  &layer_ru
             >;
 
             display-name = "En Base";
