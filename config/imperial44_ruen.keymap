@@ -295,7 +295,7 @@
 
             display-name = "En Base";
             sensor-bindings =
-                <&inc_dec_kp PAGE_UP PAGE_DOWN>,
+                <&inc_dec_kp PAGE_DOWN PAGE_UP>,
                 <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
